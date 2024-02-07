@@ -47,46 +47,10 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
-    },
-    "rich_text_mGHF6H": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_gHEYcH": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "button_U6gjqV": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_gHEYcH",
-        "button_U6gjqV"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
     "featured_collection",
-    "custom_image_with_text_K6G8V3",
-    "rich_text_mGHF6H"
+    "custom_image_with_text_K6G8V3"
   ]
 }
