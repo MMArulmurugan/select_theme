@@ -1,0 +1,213 @@
+
+{% style %}
+  .padding-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+  }
+
+  @media (min-width: 750px) {
+    .padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  .subheading-{{ section.id }} {
+    color: {{ section.settings.subheading_text_color }};
+  }
+  .heading-{{ section.id }} {
+    color: {{ section.settings.heading_text_color }};
+  }
+  .paragraph-{{ section.id }},
+  .paragraph-{{ section.id }} * {
+    color: {{ section.settings.paragraph_text_color }};
+  }
+{% endstyle %}
+
+<div class="image-with-text ">
+  <div class="page-width">
+
+    <div class="image-with-text__box image-with-text__box--left">
+      
+      <div class="image-with-text__image">  
+        {% if section.settings.image_descktop  != blank %}
+          {% render 'image', 
+            mobileImage: section.settings.image_mobile, 
+            desktopImage: section.settings.image_descktop 
+          %}
+        {% else %}
+          <div class="media media--square">
+            {{ 'detailed-apparel-1' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+      </div>
+      
+      <div class="image-with-text__container image-with-text__container--bottom">
+        {% if section.settings.heading_text != blank %}
+          <h2 class="heading-{{ section.id }}">{{ section.settings.heading_text }}</h2>
+        {% endif %}
+        {% if section.settings.paragraph_text != blank %}
+          <div class="paragraph-{{ section.id }}">{{ section.settings.paragraph_text }}</div>
+        {% endif %}
+
+        <div>
+             {%- if section.settings.button_text_one != blank -%}
+            <a
+              {% if section.settings.button_link_one == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ section.settings.button_link_one }}"
+              {% endif %}
+              class=""
+            >
+              {{- section.settings.button_text_one | escape -}}
+            </a>
+            <span>|</span>
+            <a
+              {% if section.settings.button_link_two == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ section.settings.button_link_two }}"
+              {% endif %}
+              class=""
+            >
+              {{- section.settings.button_text_two | escape -}}
+            </a>        
+          {%- endif -%}
+          
+        </div>
+        
+       
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Custom Image with Text",
+    "tag": "section",
+    "class": "custom-image-text",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Image settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_descktop",
+        "label": "Image for Descktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Image for Mobile"
+      },
+      {
+        "type": "select",
+        "id": "image_position",
+        "label": "Image position",
+        "options": [
+          { "value": "left", "label": "Left" },
+          { "value": "right", "label": "Right" }
+        ],
+        "default": "left",
+        "info": "This setting is only applicable for large devices"
+      },
+      {
+        "type": "header",
+        "content": "Content settings"
+      },
+      
+      {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Heading",
+        "default": "Heading text"
+      },
+      {
+        "type": "color",
+        "id": "heading_text_color",
+        "label": "Heading color",
+        "default": "#000000"
+      },
+      {
+        "type": "richtext",
+        "id": "paragraph_text",
+        "label": "Paragraph",
+        "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
+      },
+      {
+        "type": "color",
+        "id": "paragraph_text_color",
+        "label": "Paragraph color",
+        "default": "#000000"
+      },
+      {
+        "type": "text",
+        "id": "button_text_one",
+        "label": "First Button text",
+        "default": "First Button text"
+      },
+      {
+        "type": "url",
+        "id": "button_link_one",
+        "label": "First Button link"
+      },
+      {
+        "type": "text",
+        "id": "button_text_two",
+        "label": "Second Button text",
+        "default": "Second Button text"
+      },
+      {
+        "type": "url",
+        "id": "button_link_two",
+        "label": "Second Button link"
+      },
+      {
+        "type": "header",
+        "content": "Alignment settings"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text alignment",
+        "options": [
+          { "value": "left", "label": "Left" },
+          { "value": "center", "label": "Center" },
+          { "value": "right", "label": "Right" }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "header",
+        "content": "Section padding"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 40
+      }
+    ],
+    "presets": [{
+      "name": "Custom Image with Text"
+    }]
+  }
+{% endschema %}
