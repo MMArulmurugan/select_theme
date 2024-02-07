@@ -3496,7 +3496,7 @@ details-disclosure > details {
   }
 }
 
-.image-with-text {
+/* .image-with-text {
   border-radius: 0.2rem;
 }
 .image-with-text .media > *:not(.zoom, .deferred-media__poster-button, .card__link) {
@@ -3722,3 +3722,4 @@ details-disclosure > details {
     max-width: 44.3rem;
   }
 }
+ */
