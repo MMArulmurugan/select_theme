@@ -52,7 +52,7 @@
     "custom_product_list_slider_D3cCMR": {
       "type": "custom-product-list-slider",
       "settings": {
-        "slider_heading": "Slider Heading",
+        "slider_heading": "Individual Styles Redefined",
         "product_list": [
           "chore-coat-brown-duck",
           "highland-tee-worn-black",
@@ -62,7 +62,9 @@
           "lean-dean-plain-stone",
           "robby-le-bleue-denim-jacket",
           "highland-tee-white"
-        ]
+        ],
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     }
   },
