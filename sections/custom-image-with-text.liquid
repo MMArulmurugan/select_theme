@@ -4,82 +4,136 @@
     padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
     padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
   }
-
-  @media (min-width: 750px) {
-    .padding-{{ section.id }} {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
+  .custom-image-with-text__image_container{
+    width: 65%;
   }
-  .subheading-{{ section.id }} {
-    color: {{ section.settings.subheading_text_color }};
+  .custom-image-with-text__text_container{
+    width: 35%;
+    padding-left: 40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: {{ section.settings.vertical_alignment }};
+  }
+  .custom-image-with-text__image_container img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+  }
+  .custom-image-with-text__wrapper{
+    display:flex;
+  }
+  .custom-image-with-text__heading{
+    font-weight:600;
+    margin: 0;
   }
   .heading-{{ section.id }} {
     color: {{ section.settings.heading_text_color }};
+
   }
   .paragraph-{{ section.id }},
   .paragraph-{{ section.id }} * {
     color: {{ section.settings.paragraph_text_color }};
+    margin-top: 0;
   }
+  .custom-image-with-text__button{
+    text-decoration: none;
+    color:#181818;
+    font-weight:bold;
+  }
+  .custom-image-with-text__button {
+    position: relative;
+    text-decoration: none;
+    color: #181818;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  .custom-image-with-text__button::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #181818;
+    transition: width 0.3s ease;
+  }
+
+  .custom-image-with-text__button:hover::before {
+    width: 100%;
+  }
+  @media (max-width: 750px) {
+    .padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .custom-image-with-text__wrapper{
+     flex-direction:column;
+   }
+   .custom-image-with-text__image_container{
+    width: 100%;
+  }
+  .custom-image-with-text__text_container{
+    width: 100%;
+    padding-left: 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: {{ section.settings.vertical_alignment }};
+  }
+  }
+ 
 {% endstyle %}
 
-<div class="image-with-text ">
+<div class="custom-image-with-text padding-{{ section.id }}">
   <div class="page-width">
-
-    <div class="image-with-text__box image-with-text__box--left">
-      
-      <div class="image-with-text__image">  
-        {% if section.settings.image_descktop  != blank %}
-          {% render 'image', 
-            mobileImage: section.settings.image_mobile, 
-            desktopImage: section.settings.image_descktop 
-          %}
-        {% else %}
-          <div class="media media--square">
-            {{ 'detailed-apparel-1' | placeholder_svg_tag }}
-          </div>
-        {% endif %}
-      </div>
-      
-      <div class="image-with-text__container image-with-text__container--bottom">
-        {% if section.settings.heading_text != blank %}
-          <h2 class="heading-{{ section.id }}">{{ section.settings.heading_text }}</h2>
-        {% endif %}
-        {% if section.settings.paragraph_text != blank %}
-          <div class="paragraph-{{ section.id }}">{{ section.settings.paragraph_text }}</div>
-        {% endif %}
-
-        <div>
-             {%- if section.settings.button_text_one != blank -%}
-            <a
-              {% if section.settings.button_link_one == blank %}
-                role="link" aria-disabled="true"
-              {% else %}
-                href="{{ section.settings.button_link_one }}"
-              {% endif %}
-              class=""
-            >
-              {{- section.settings.button_text_one | escape -}}
-            </a>
-            <span>|</span>
-            <a
-              {% if section.settings.button_link_two == blank %}
-                role="link" aria-disabled="true"
-              {% else %}
-                href="{{ section.settings.button_link_two }}"
-              {% endif %}
-              class=""
-            >
-              {{- section.settings.button_text_two | escape -}}
-            </a>        
-          {%- endif -%}
-          
+      <div class = "custom-image-with-text__wrapper">
+        <div class= "custom-image-with-text__image_container">
+          {% if section.settings.image_descktop  != blank %}
+            {% render 'image', 
+              mobileImage: section.settings.image_mobile, 
+              desktopImage: section.settings.image_descktop 
+            %}
+          {% else %}
+            <div class="media media--square">
+              {{ 'detailed-apparel-1' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
         </div>
-        
-       
+        <div class = "custom-image-with-text__text_container">
+          {% if section.settings.heading_text != blank %}
+            <h2 class="h3 custom-image-with-text__heading heading-{{ section.id }}">{{ section.settings.heading_text }}</h2>
+          {% endif %}
+          {% if section.settings.paragraph_text != blank %}
+            <div class="paragraph-{{ section.id }}">{{ section.settings.paragraph_text }}</div>
+          {% endif %}
+  
+          <div>
+               {%- if section.settings.button_text_one != blank -%}
+              <a class = "custom-image-with-text__button"
+                {% if section.settings.button_link_one == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ section.settings.button_link_one }}"
+                {% endif %}
+                class=""
+              >
+                {{- section.settings.button_text_one | escape -}}
+              </a>
+              <span>|</span>
+              <a class = "custom-image-with-text__button"
+                {% if section.settings.button_link_two == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ section.settings.button_link_two }}"
+                {% endif %}
+                class=""
+              >
+                {{- section.settings.button_text_two | escape -}}
+              </a>        
+            {%- endif -%}
+            
+        </div>
       </div>
-    </div>
-    
   </div>
 </div>
 
@@ -204,7 +258,27 @@
         "unit": "px",
         "label": "Padding bottom",
         "default": 40
-      }
+      },{
+        "type": "select",
+        "id": "vertical_alignment",
+        "label": "Vertical alignment",
+        "options": [
+          {
+            "value": "start",
+            "label": "Top"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "end",
+            "label": "End"
+          }
+
+         ],
+          "default": "center"
+         }
     ],
     "presets": [{
       "name": "Custom Image with Text"

@@ -38,19 +38,37 @@
         "heading_text": "Wear the Story of Every Moment with Distinction",
         "heading_text_color": "#000000",
         "paragraph_text": "<p>Each piece speaks of moments lived, memories made, and a future of distinction.<\/p>",
-        "paragraph_text_color": "#000000",
+        "paragraph_text_color": "#838282",
         "button_text_one": "First Button text",
         "button_link_one": "shopify:\/\/collections",
         "button_text_two": "Second Button text",
         "button_link_two": "shopify:\/\/collections",
         "text_alignment": "left",
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "vertical_alignment": "end"
+      }
+    },
+    "custom_product_list_slider_D3cCMR": {
+      "type": "custom-product-list-slider",
+      "settings": {
+        "slider_heading": "Slider Heading",
+        "product_list": [
+          "chore-coat-brown-duck",
+          "highland-tee-worn-black",
+          "jude-navy-chevron-shirt",
+          "lean-dean-dry-gentle-worn",
+          "black-stripe-spring-oxford-shirt",
+          "lean-dean-plain-stone",
+          "robby-le-bleue-denim-jacket",
+          "highland-tee-white"
+        ]
       }
     }
   },
   "order": [
     "featured_collection",
-    "custom_image_with_text_K6G8V3"
+    "custom_image_with_text_K6G8V3",
+    "custom_product_list_slider_D3cCMR"
   ]
 }
