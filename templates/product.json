@@ -6,7 +6,7 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text": "{{ product.vendor }}{{ product.metafields.custom.cloth_material.value }}",
+            "text": "{{ product.vendor }}",
             "text_style": "uppercase"
           }
         },
