@@ -11,10 +11,26 @@
             "text": "Welcome to our store",
             "link": ""
           }
+        },
+        "announcement_gkagJA": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store once again",
+            "link": ""
+          }
+        },
+        "announcement_mmdtQc": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement_gkagJA",
+        "announcement_mmdtQc"
       ],
       "settings": {
         "color_scheme": "background-1",
