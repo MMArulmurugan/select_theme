@@ -66,30 +66,11 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
-    },
-    "custom_product_list_slider_zXCFRh": {
-      "type": "custom-product-list-slider",
-      "settings": {
-        "slider_heading": "Individual Styles Redefined",
-        "product_list": [
-          "chore-coat-brown-duck",
-          "highland-tee-worn-black",
-          "jude-navy-chevron-shirt",
-          "lean-dean-dry-gentle-worn",
-          "black-stripe-spring-oxford-shirt",
-          "lean-dean-plain-stone",
-          "robby-le-bleue-denim-jacket",
-          "highland-tee-white"
-        ],
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
     }
   },
   "order": [
     "featured_collection",
     "custom_image_with_text_K6G8V3",
-    "custom_product_list_slider_D3cCMR",
-    "custom_product_list_slider_zXCFRh"
+    "custom_product_list_slider_D3cCMR"
   ]
 }
