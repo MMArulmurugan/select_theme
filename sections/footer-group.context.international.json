@@ -23,7 +23,7 @@
           "disabled": false,
           "settings": {
             "heading": "Starter Sites",
-            "menu": "footer"
+            "menu": "starter-sites"
           }
         }
       },
