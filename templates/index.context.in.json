@@ -4,5 +4,21 @@
     "market": "in"
   },
   "sections": {
+    "custom_product_list_slider_D3cCMR": {
+      "settings": {
+        "product_list": [
+          "men-black-grey-checked-pure-cotton-casual-shirt",
+          "men-black-slim-fit-casual-shirt",
+          "navy-sport-jacket",
+          "olive-overdye-oxford-shirt",
+          "robby-le-bleue-denim-jacket",
+          "lean-dean-dry-gentle-worn",
+          "blue-silk-tuxedo",
+          "classic-leather-jacket"
+        ]
+      },
+      "blocks": {
+      }
+    }
   }
 }
