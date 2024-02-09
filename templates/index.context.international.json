@@ -4,5 +4,18 @@
     "market": "international"
   },
   "sections": {
+    "custom_product_list_slider_D3cCMR": {
+      "settings": {
+        "product_list": [
+          "highland-tee-worn-black",
+          "lean-dean-dry-gentle-worn",
+          "lean-dean-plain-stone",
+          "highland-tee-white",
+          "olive-overdye-oxford-shirt"
+        ]
+      },
+      "blocks": {
+      }
+    }
   }
 }
