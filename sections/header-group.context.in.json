@@ -6,9 +6,10 @@
   "sections": {
     "header": {
       "settings": {
+        "logo_position": "middle-center",
         "enable_country_selector": false,
         "enable_language_selector": false,
-        "logo_position": "middle-center"
+        "sticky_header_type": "on-scroll-up"
       },
       "blocks": {
       }
