@@ -4,5 +4,17 @@
     "market": "in"
   },
   "sections": {
+    "image_with_text_taHQEg": {
+      "settings": {
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "overlap",
+        "desktop_image_width": "small",
+        "height": "small",
+        "image": "shopify:\/\/shop_images\/05-t_shirts-hover.jpg"
+      },
+      "blocks": {
+      }
+    }
   }
 }
