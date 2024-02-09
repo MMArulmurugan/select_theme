@@ -20,5 +20,10 @@
       "blocks": {
       }
     }
-  }
+  },
+  "order": [
+    "featured_collection",
+    "custom_image_with_text_K6G8V3",
+    "custom_product_list_slider_D3cCMR"
+  ]
 }
