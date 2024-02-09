@@ -115,7 +115,7 @@
         "button_NLEGby": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Button label{{ product.metafields.custom.date_and_time.value.extra_date | metafield_text }}",
             "button_link": "",
             "button_style_secondary": false
           }
