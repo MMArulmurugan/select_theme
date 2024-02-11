@@ -41,6 +41,9 @@
   .quick-view-button{
     letter-spacing: 0;
   }
+  .has-compare-price{
+    color:red;
+  }
  
 
   {% endstyle %}
@@ -104,8 +107,10 @@
       <a href="{{ product.url }}" class="product-card__title h3">{{ product.title }}</a><br>
       <a href="{{ product.url }}" class="product-card__vendor h5">{{ product.vendor}}</a>
       <div class="product-card__prices">
-        <span class="product-card__price">{{ current_variant.price | money_without_trailing_zeros }}</span>
-  
+        <span class="product-card__price {% if current_variant.compare_at_price > current_variant.price %}has-compare-price{% endif %}">
+          {{ current_variant.price | money_without_trailing_zeros }}
+        </span>
+        
         {% if current_variant.compare_at_price > current_variant.price %}
           <s class="product-card__compareprice">{{ current_variant.compare_at_price | money_without_trailing_zeros }}</s>
         {% endif %}

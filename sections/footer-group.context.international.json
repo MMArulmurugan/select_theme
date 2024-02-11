@@ -1,0 +1,38 @@
+{
+  "parent": "footer-group.json",
+  "context": {
+    "market": "international"
+  },
+  "sections": {
+    "footer": {
+      "settings": {
+        "color_scheme": "background-2",
+        "newsletter_enable": true,
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "show_policy": true,
+        "margin_top": 40,
+        "padding_top": 80,
+        "padding_bottom": 80
+      },
+      "blocks": {
+        "link_list_Hzjkh": {
+          "type": "link_list",
+          "disabled": false,
+          "settings": {
+            "heading": "Starter Sites",
+            "menu": "starter-sites"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_Hzjkh"
+      ]
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

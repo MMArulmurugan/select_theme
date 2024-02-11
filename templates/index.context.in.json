@@ -1,0 +1,24 @@
+{
+  "parent": "index.json",
+  "context": {
+    "market": "in"
+  },
+  "sections": {
+    "custom_product_list_slider_D3cCMR": {
+      "settings": {
+        "product_list": [
+          "olive-overdye-oxford-shirt",
+          "highland-tee-white",
+          "chore-coat-brown-duck",
+          "denim-chore-coat-black",
+          "columbia-tee-worn-olive",
+          "jude-navy-chevron-shirt",
+          "lean-dean-dry-gentle-worn",
+          "lean-dean-plain-stone"
+        ]
+      },
+      "blocks": {
+      }
+    }
+  }
+}
