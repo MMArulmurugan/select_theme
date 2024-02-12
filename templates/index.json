@@ -52,7 +52,7 @@
     "custom_product_list_slider_D3cCMR": {
       "type": "custom-product-list-slider",
       "settings": {
-        "slider_heading": "Individual Styles Redefined",
+        "slider_heading": "Individual Styles Redefined    ssss",
         "product_list": [
           "highland-tee-worn-black",
           "lean-dean-dry-gentle-worn",
@@ -110,9 +110,10 @@
         "slide_dgVHdM"
       ],
       "settings": {
-        "section_heading": "Shop by Categories",
+        "section_heading": "Shop by Categories  sssss",
         "show_all_text": "See All",
         "show_all_button_link": "shopify:\/\/pages\/contact",
+<<<<<<< HEAD
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -146,6 +147,8 @@
         "title_text": "Look of the Day",
         "image": "shopify:\/\/shop_images\/Rectangle_91.jpg",
         "mobile_image": "shopify:\/\/shop_images\/Rectangle_91.jpg",
+=======
+>>>>>>> d0e8ca51d148373cb2821fbd8b1a4b2018b89aa8
         "padding_top": 36,
         "padding_bottom": 36
       }
