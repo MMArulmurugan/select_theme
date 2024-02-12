@@ -4,43 +4,6 @@
 }
 .custom-product-list-slider__card{
     background: #ffffff;
-    box-shadow:  0px 4px 6px rgba(0, 0, 0, 0.08);
     text-decoration:none;
 }
 
-.splide__arrow {
-    background: #ffffff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
-    border-radius: 50%;
-  }
-
-  .splide:hover .splide__arrow {
-    display: block;
-    background: #ffffff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
-    border-radius: 50%;
-  }
-  
-  .splide__arrow::before {
-    color: black;
-  }
-  
-  .splide__arrow.splide__arrow--next {
-    background: #ffffff;
-  }
-  
-  .splide__arrow.splide__arrow--next::before {
-    content: "";
-    color: black;
-    font-size: 50%;
-  }
-  
-  .splide__arrow.splide__arrow--prev {
-    background: #ffffff;
-  }
-  
-  .splide__arrow.splide__arrow--prev::before {
-    content: "";
-    color: black;
-    font-size: 50%;
-  }
