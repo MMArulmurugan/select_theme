@@ -1,13 +1,21 @@
-class CustomSlider extends HTMLElement {
-    constructor() {
-      super();
-      this.splideEl = this.querySelector(".splide");
-      this.mountSplider();
-      this.options = this.querySelector('[data-options]')
-      console.log(this.options);
-    }
-    mountSplider() {
-      new Splide(this.splideEl).mount();
-    }
+class ShopupSlider extends HTMLElement {
+  constructor() {
+    super();
+    this.splideEl = this.querySelector(".splide");
+    this.options = JSON.parse(this.querySelector("script").textContent);
+   
+    console.log(this.options);
+    this.mountSplider();
   }
-  customElements.define("custom-slider", CustomSlider);
+
+  mountSplider() {
+    new Splide(this.splideEl, this.options).mount();
+  }
+}
+
+customElements.define("shop-up-slider", ShopupSlider);
+
+
+
+
+
